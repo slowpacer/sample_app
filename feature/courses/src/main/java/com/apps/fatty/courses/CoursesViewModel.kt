@@ -29,6 +29,7 @@ import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.IOException
 
 //please note that the Presentation-layer was omitted
@@ -63,12 +64,12 @@ class CoursesViewModel(
         Pager(PagingConfig(pageSize = 6)) { coursesSource }.flow.cachedIn(viewModelScope)
 
 
-    fun fetchCourses() = viewModelScope.launch(Dispatchers.IO) {
+    fun fetchCourses() = viewModelScope.launch {
         // example for mixed approaches within suspend <-> flow
         // hello mapping endless cycle
         // checkout this one - https://florentblot.medium.com/redundant-dto-domain-mapping-in-kotlin-flow-bffbd1d28fc8
         // or just gave away your "perfect" clean arch and keep it simple
-        viewModelScope.launch(Dispatchers.IO) {
+        withContext(Dispatchers.IO) {
             useCase.flowExample(CoursesInquiry(2023, page++))
                 .map {
                     it.map { dataCourse ->
