@@ -15,7 +15,7 @@ import androidx.lifecycle.ViewModelProvider.*
 import androidx.lifecycle.viewmodel.CreationExtras
 import com.apps.fatty.courses.CoursesViewModel
 import com.apps.fatty.courses.ui.CoursesRoute
-import com.apps.fatty.grasper.network.ui.theme.GrasperTheme
+import com.apps.fatty.grasper.ui.theme.GrasperTheme
 
 class HomeActivity : ComponentActivity() {
 

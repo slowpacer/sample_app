@@ -1,4 +1,4 @@
-package com.apps.fatty.grasper.network.model
+package com.apps.fatty.network.model
 
 import kotlinx.serialization.Serializable
 

@@ -1,7 +1,7 @@
 package com.apps.fatty.network.ktor
 
 import androidx.core.net.toUri
-import com.apps.fatty.grasper.network.model.NestedDataResponse
+import com.apps.fatty.network.model.NestedDataResponse
 import com.apps.fatty.network.ktor.QueryParam.*
 import com.apps.fatty.network.ktor.UrlPath.*
 import com.apps.fatty.network.model.Course

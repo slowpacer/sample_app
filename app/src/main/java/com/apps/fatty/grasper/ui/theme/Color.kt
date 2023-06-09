@@ -1,4 +1,4 @@
-package com.apps.fatty.grasper.network.ui.theme
+package com.apps.fatty.grasper.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

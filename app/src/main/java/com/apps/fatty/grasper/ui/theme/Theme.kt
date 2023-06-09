@@ -1,4 +1,4 @@
-package com.apps.fatty.grasper.network.ui.theme
+package com.apps.fatty.grasper.ui.theme
 
 import android.app.Activity
 import android.os.Build
